@@ -2,10 +2,10 @@ const contacts = require("./contacts");
 
 const invokeAction = async ({action, contactId, name, email, phone}) => {
     switch(action) {
-        case "read":
+        case "list":
             const allContacts = await contacts.listContacts();
             return console.log(allContacts);
-        case "getById":
+        case "get":
             const oneContact = await contacts.getContactById(contactId);
             return console.log(oneContact);   
         case "add":
@@ -17,8 +17,4 @@ const invokeAction = async ({action, contactId, name, email, phone}) => {
 
     }
 }
-//invokeAction({action: "add", name: "user", email: "user@gmail.com", phone: "9999999"});
-
-//invokeAction({action: "read"});
-//invokeAction({action: "getById", contactId: "5NwpneEOYDE6y9_1sVVad"});
-invokeAction({action: "remove", contactId: "5NwpneEOYDE6y9_1sVVad"})
+invokeAction({action: "remove", contactId: "fL4OH8i1PEPCLNTFA6vPo"});
